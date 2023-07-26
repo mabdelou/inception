@@ -1,0 +1,116 @@
+version: '3.9'
+
+services:
+  nginx:
+    depends_on:
+      - wordpress
+    container_name: nginx
+    build: ./requirements/nginx/
+    ports:
+      - 443:443
+    networks:
+      net:
+        ipv4_address: 13.37.24.4
+    volumes:
+      - ./requirements/tools/wordpress_volume:/var/www/html
+    env_file: .env
+    restart: always
+  wordpress:
+    depends_on:
+      - mysql
+      - redis
+    container_name: wordpress
+    build: ./requirements/wordpress/
+    env_file: .env
+    ports:
+      - 9000:9000
+    networks:
+      net:
+        ipv4_address: 13.37.24.3
+    volumes:
+      - ./requirements/tools/wordpress_volume:/var/www/html
+        #tty: true
+    restart: always
+  mysql:
+    container_name: mysql
+      #image: mariadb
+    hostname: mysql
+    build: ./requirements/mariadb/
+    ports:
+      - 3306:3306
+    networks:
+      net:
+        ipv4_address: 13.37.24.2
+    volumes:
+      - ./requirements/tools/mysql_volume:/var/lib/mysql
+    env_file: .env
+    restart: always
+
+  web:
+    hostname: web
+    container_name: web
+    build: ./requirements/bonus/website/
+    depends_on:
+      - wordpress
+    volumes:
+      - ./requirements/tools/wordpress_volume/website:/var/www/html/website
+  redis:
+    depends_on:
+      - mysql
+    container_name: redis
+    hostname: redis
+    build: ./requirements/bonus/redis/
+    ports:
+      - 6379:6379
+    restart: always
+    volumes:
+      - ./requirements/tools/wordpress_volume:/var/www/html
+    networks:
+      net:
+        ipv4_address: 13.37.24.5
+  ftp:
+    depends_on:
+      - wordpress
+    container_name: ftp
+    hostname: ftp
+    build: ./requirements/bonus/ftp/
+    ports:
+      - 0021:0021
+    restart: always
+    volumes:
+      - ./requirements/tools/wordpress_volume:/var/www/html
+    networks:
+      net:
+        ipv4_address: 13.37.24.6
+  adminer:
+    depends_on:
+      - wordpress
+    container_name: adminer
+    hostname: adminer
+    build: ./requirements/bonus/adminer
+    volumes:
+      - ./requirements/tools/wordpress_volume/adminer:/var/www/html/adminer
+  ssh:
+    container_name: ssh
+    hostname: ssh
+    build: ./requirements/bonus/ssh/
+    restart: always
+    ports:
+      - 2222:2222
+    networks:
+      net:
+        ipv4_address: 13.37.24.7
+
+
+#volumes:
+  #  mysql:
+    #  wordpress:
+networks:
+  net:
+    driver: bridge
+
+networks:
+  net:
+    ipam:
+      config:
+        - subnet: 13.37.24.0/28

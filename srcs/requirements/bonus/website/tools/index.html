@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+        <title>mabdelou-website</title>
+        <script>
+            var ft_goto = function(){
+                var a =  document.getElementById('slct');
+                var str = a.options[a.selectedIndex].value;
+                location.href = "#" + decodeURI(str);
+                // console.log("#" + document.getElementById('slct').options[select.selectedIndex].value);
+            }
+        </script>
+        <script>
+            function tellPos(p){
+                if(p.pageY > 1200)
+                {
+                    document.getElementById("img2").style.opacity= "1";
+                    if(p.pageY > 2424)
+                        document.getElementById("img2").style.filter = "invert(100%)";
+                    else
+                        document.getElementById("img2").style.filter = "invert(100%)";
+                }
+                else
+                    document.getElementById("img2").style.opacity= "0";
+                console.log(p.pageY);
+            }
+            addEventListener('mousemove', tellPos, false);
+            addEventListener('mouseover', tellPos, false);
+
+        </script>
+        <style>
+            body
+            {
+                position: relative;
+                height: 5000px;
+                background-image: url("image.jpeg");
+                /* background: linear-gradient(to bottom),opacity(1),opacity(0); */
+                background-repeat: no-repeat;
+                background-attachment: scroll;
+                background-size: 100% 800px;
+            }
+            .mabdelou
+            {
+                position: relative;
+                max-width: 210px;
+                max-height: 52px;
+                height: 50px;
+                width:200%;
+                animation: mymove 10s infinite;
+            }
+            .mabdelou2
+            {
+                opacity: 0;
+                position: relative;
+                max-width: 210px;
+                max-height: 52px;
+                height: 50px;
+                width:200%;
+                animation: mymove 10s infinite;
+                animation-delay: -8s;
+            }
+            .mabdelou3
+            {
+                opacity: 0;
+                position: relative;
+                max-width: 210px;
+                max-height: 52px;
+                height: 50px;
+                width:200%;
+                animation: mymove 10s infinite;
+                animation-delay: -2s;
+            }
+            .mabdelou4
+            {
+                opacity: 0;
+                position: relative;
+                max-width: 210px;
+                max-height: 52px;
+                height: 50px;
+                width:200%;
+                animation: mymove 10s infinite;
+                animation-delay: -6s;
+            }
+            .mabdelou5
+            {
+                opacity: 0;
+                position: relative;
+                max-width: 210px;
+                max-height: 52px;
+                height: 50px;
+                width:200%;
+                animation: mymove 10s infinite;
+                animation-delay: -4s;
+            }
+            select
+            {
+                position: relative;
+                height: 50px;
+                width:50%;
+                left: 25%;
+                bottom: -3%;
+                border-radius: 20px;
+                border: 0px;
+                text-shadow: 50px 50px 50px white;
+                animation: whiteshadow 4s infinite;
+            }
+            option
+            {
+                text-align: center;
+                font-family: 'Pacifico';
+            }
+            .move_down
+            {
+                position: relative;
+                animation: movedown 2s infinite;
+            }
+            p
+            {
+                text-align: center;
+                color: white;
+                font-size: 250%;
+                font-family: 'Pacifico';
+            }
+            #img1
+            {
+                position: relative;
+                left: 50%;
+                bottom: -450px;
+                height: 50px;
+                width: 50px;
+            }
+            #img2
+            {
+                position: fixed;
+                left: 95%;
+                bottom: 30px;
+                height: 50px;
+                width: 50px;
+                z-index: 10;
+                animation: moveup 2s infinite;
+            }
+            .C1
+            {
+                position: relative;
+                bottom: -500px;
+            }
+            #a1
+            {
+                text-align: center;
+                color: black;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #cc1
+            {
+                position: relative;
+                text-align: center;
+                color: black;
+                font-size: 20px;
+                width: 75%;
+                left: 12%;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            #profile_img
+            {
+                width: 100%;
+                height: auto;
+                animation: filter 3s infinite;
+            }
+            .test1
+            {
+                position: relative;
+                /* width: 50%; */
+            }
+            .test2
+            {
+                position: absolute;
+                bottom: 100%;
+                left: 0;
+                right: 0;
+                height: 0;
+                width: 100%;
+                background-color: #008CBA;
+                transition: .5s ease;
+            }
+            .test1:hover .test2
+            {
+                bottom: 0;
+                height: 100%;
+            }
+
+            .C2
+            {
+                position: relative;
+                bottom: -500px;
+            }
+            #a2
+            {
+                text-align: center;
+                color: black;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #cc2
+            {
+                position: relative;
+                text-align: left;
+                color: black;
+                width: 75%;
+                left: 12%;
+                font-size: 20px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            #laptop_img
+            {
+                width: 50%;
+                float: right;
+                z-index: -1;
+            }
+            .C3
+            {
+                position: relative;
+                bottom:-10%;
+                right: 25%;
+            }
+            .q_part
+            {
+                position: relative;
+                bottom:-10%;
+                background-image: url("q_image.jpg");
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: 150% 100%;
+            }
+            #a3
+            {
+                position: relative;
+                text-align: center;
+                color: black;
+                /* text-shadow: 8px 8px 8px black; */
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a4
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a5
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a6
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a7
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a8
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a9
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a10
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a11
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #a12
+            {
+                position: relative;
+                text-align: center;
+                color: white;
+                text-shadow: 8px 8px 8px black;
+                left:25%;
+                font-size: 50px;
+                font-family: 'Pacifico';
+            }
+            #cc3
+            {
+                position: relative;
+                width: 75%;
+                height: 1000px;
+                left: 38%;
+            }
+            #cc4
+            {
+                position: relative;
+                left: 38%;
+                text-align: center;
+                color: white;
+                text-shadow: 2px 2px 2px black;
+                /* border-radius: 20px;
+                border: 20px;
+                border-color: white; */
+                /* background-color: white; */
+                font-size: 20px;
+                width: 75%;
+
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+            .final
+            {
+                position: relative;
+                width: 100%;
+                height: 350px;
+                bottom: -450px;
+                background-color: black;
+                border-top: 1px;
+                border-style: solid;
+                border-color: white;
+            }
+            #intra
+            {
+                position: relative;
+                left: 42%;
+                bottom: -325px;
+                width: 20px;
+                height: 20px;
+                /* filter: invert(100%); */
+            }
+            #github
+            {
+                position: relative;
+                left: 44%;
+                bottom: -325px;
+                width: 20px;
+                height: 20px;
+                filter: invert(100%);
+            }
+            #linkedin
+            {
+                position: relative;
+                left: 46%;
+                bottom: -325px;
+                width: 20px;
+                height: 20px;
+                filter: invert(100%);
+            }
+            #facebook
+            {
+                position: relative;
+                left: 48%;
+                bottom: -325px;
+                width: 20px;
+                height: 20px;
+                filter: invert(100%);
+            }
+            #instegram
+            {
+                position: relative;
+                left: 50%;
+                bottom: -325px;
+                width: 20px;
+                height: 20px;
+                filter: invert(100%); 
+            }
+            @keyframes whiteshadow
+            {
+                from 
+                {
+                    box-shadow: 5px  5px 20px 15px white;
+                }
+                50%
+                {
+                    box-shadow: 2px  2px 8px 6px white;
+                }
+                to
+                {
+                    box-shadow: 5px  5px 20px 15px white;
+                }
+            }
+            @keyframes mymove 
+            {
+                from 
+                {
+                    opacity: 0;
+                    left: 0%;
+                }
+                25%
+                {
+                    opacity: 1;
+                }
+                75%  
+                {
+                    opacity: 1;
+                }
+                to 
+                {
+                    opacity: 0;
+                    left: 75%;
+                }
+            }
+            @keyframes moveup
+            {
+                from 
+                {
+                    bottom: 0px;
+                }
+                50%  
+                {
+                    bottom: 20px;
+                }
+                to 
+                {
+                    bottom: 0px;
+                }
+            }
+            @keyframes filter
+            {
+                from 
+                {
+                    filter: brightness(100%);
+                }
+                50%  
+                {
+                    filter: brightness(50%);
+                }
+                to 
+                {
+                    filter: brightness(100%);
+                }
+            }
+            @keyframes movedown
+            {
+                from 
+                {
+                    top: 0px;
+                }
+                50%  
+                {
+                    top: 20px;
+                }
+                to 
+                {
+                    top: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+            <div class="mabdelou">
+                <p id="first_par">
+                    mabdelou
+                </p>
+            </div>
+            <div class="mabdelou2">
+                <p>
+                    inception
+                </p>
+            </div>
+            <div class="mabdelou3">
+                <p>
+                    mabdelou.42.fr
+                </p>
+            </div>
+            <div class="mabdelou4">
+                <p>
+                    intra.42
+                </p>
+            </div>
+            <div class="mabdelou5">
+                <p>
+                    welcome
+                </p>
+            </div>
+            <select id="slct" onchange="ft_goto();">
+                    <option value="a1">
+                        about me
+                    </option>
+                    <option value="a2">
+                        about project
+                    </option>
+                    <option value="a3">
+                        what is docker ?
+                    </option>
+                    <option value="a4">
+                        what is different bitween virtual machine & docker
+                    </option>
+                    <option value="a5">
+                        what is different bitween docker & docker-compose
+                    </option>
+                    <option value="a6">
+                        what is nginx
+                    </option>
+                    <option value="a7">
+                        how nginx work
+                    </option>
+                    <option value="a8">
+                        what is wordpress
+                    </option>
+                    <option value="a9">
+                        how wordpress work
+                    </option>
+                    <option value="a10">
+                        what is mariadb
+                    </option>
+                    <option value="a11">
+                        how mariadb work
+                    </option>
+                    <option value="a12">
+                            thanks
+                    </option>
+            </select>
+            <div class="move_down">
+                <a href="#img1">
+                    <img src="1483511.png" alt="move_down" id="img1">
+                </a>
+            </div>
+                <a href="#first_par">
+                        <img src="up.png" alt="move_up" id="img2">
+
+                </a>
+            <div class="C1">
+                <p id="a1">
+                    about me
+                </p>
+                <p id="cc1">
+                    mabdelou is a username in intra website , and my full name is mohammed
+                    abdelouafi i'm study in 1337-benguerir school
+                </p>
+                <div class="test1">
+                    <img src="1337.png" alt="1337" id="profile_img">
+                    <!-- <div class="test2">
+                    </div> -->
+                    <a href="https://profile.intra.42.fr/users/mabdelou">
+                        <img src="profile.png" alt="intra_profile" class="test2">
+                    </a>
+                </div>
+            </div>
+            <div class="C2">
+                <p id="a2">
+                    about project
+                </p>
+                <p id="cc2">
+                    <!-- <img src="laptop1.jpeg" alt="laptop_image" id="laptop_img"> -->
+                    <img src="loading2.gif" alt="laptop_image" id="laptop_img">
+                    But I must explain to you how all this mistaken idea of denouncing 
+                    pleasure and praising pain was born and I will give you a complete 
+                    account of the system, and expound the actual teachings of the 
+                    great explorer of the truth, the master-builder of human happiness. 
+                    No one rejects, dislikes, or avoids pleasure itself, because it is 
+                    pleasure, but because those who do not know how to pursue pleasure 
+                    rationally encounter consequences that are extremely painful. Nor 
+                    again is there anyone who loves or pursues or desires to obtain 
+                    pain of itself, because it is pain, but because occasionally 
+                    circumstances occur in which toil and pain can procure him some 
+                    great pleasure. To take a trivial example, which of us ever 
+                    undertakes laborious physical exercise, except to obtain some 
+                    advantage from it? But who has any right to find fault with a man who
+                    chooses to enjoy a pleasure that has no annoying consequences, or one
+                    who avoids a pain that produces no resultant pleasure?
+                </p>
+            </div>
+            <div class="C3">
+                <p id="a3">
+                    what is docker ?
+                </p>
+                <iframe src="https://www.ibm.com/topics/docker" title="what is docker" id="cc3">
+                </iframe>
+            </div>
+            <div class="q_part">
+                <div class="C3">
+                    <p id="a4">
+                        what is different bitween virtual machine & docker
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a5">
+                        what is different bitween docker & docker-compose
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a6">
+                        what is nginx
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a7">
+                        how nginx work
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a8">
+                        what is wordpress
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a9">
+                        how wordpress work
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a10">
+                        what is mariadb
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a11">
+                        how mariadb work
+                    </p>
+                    <p id="cc4">
+                        On the other hand, we denounce with righteous indignation and dislike
+                        men who are so beguiled and demoralized by the charms of pleasure of
+                        the moment, so blinded by desire, that they cannot foresee the pain
+                        and trouble that are bound to ensue; and equal blame belongs to those
+                        who fail in their duty through weakness of will, which is the
+                        same as saying through shrinking from toil and pain. These cases are 
+                        perfectly simple and easy to distinguish. In a free hour, when our 
+                        power of choice is untrammelled and when nothing prevents our
+                        being able to do what we like best, every pleasure is to be 
+                        welcomed and every pain avoided. But in certain circumstances and
+                        owing to the claims of duty or the obligations of business it 
+                        will frequently occur that pleasures have to be repudiated and
+                        annoyances accepted. The wise man therefore always holds in 
+                        these matters to this principle of selection: he rejects 
+                        pleasures to secure other greater pleasures, or else he endures 
+                        pains to avoid worse pains.
+                    </p>
+                </div>
+                <div class="C3">
+                    <p id="a12">
+                        thanks
+                    </p>
+                </div>
+            </div>
+            <div class="final">
+                <img id="intra" src="https://profile.intra.42.fr/assets/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg">
+                <img id="github" src="git.png">
+                <img id="linkedin" src="in.png">
+                <img id="facebook" src="fb.png">
+                <img id="instegram" src="inst.png">
+            </div>
+    </body>
+</html>
